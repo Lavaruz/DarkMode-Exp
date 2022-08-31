@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            height: 100vh;
+            overflow: hidden;
+            letter-spacing: 1px;
+        }
+        .darkmode{
+            background-color: black;
+            width: 30px;
+            height: 30px;
+            border-radius: 100%;
+            cursor: pointer;
+            animation: shake infinite .2s;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .spread{
+            width: 0px;
+            height: 0px;
+            border-radius: 100%;
+            background-color: black;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+
+        .welcome{
+            color: white;
+            padding: 3% 5%;
+            opacity: 0;
+            visibility: hidden;
+            cursor: default;
+        }
+        .profile{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 5% 30%;
+        }
+        .profile img{
+            width: 200px;
+            border-radius: 100%;
+        }
+
+
+        .animatedDarkmode{
+            animation: darkmodeIn .9s ease-in forwards;
+            visibility: visible;
+        }
+        .animatedWelcome{
+            visibility: visible;
+            animation: welcomeIn .9s ease-in forwards;
+            animation-delay: 1.5s;
+        }
+        @keyframes darkmodeIn {
+            100% { width: 2000px; height: 2000px;}
+        }
+        @keyframes welcomeIn {
+            100% { opacity: 1;}
+        }
+        @keyframes shake {
+            0% { transform: translate(-50%, -50%);}
+            25% { transform: translate(-53%, -53%);}
+            75% { transform: translate(-47%, -47%);}
+            100% { transform: translate(-51%, -51%);}
+        }
+    </style>
+    <title>Dark Mode</title>
+</head>
+<body>
+    <div class="darkmode" id="darkmode"></div>
+    <div class="spread" id="spread"></div>
+    <div class="welcome">
+        <div class="profile">
+            <img src="me.jpg" alt="">
+            <h3>Assami Muzaki</h3>
+            <p>A student at University of Indraprasta with a majoring of Computer Science and Distinction Graduate of Machine Learning Student at Bangkit Academy led by Google, Tokopedia, Gojek, & Traveloka. Proficient at Machine Learning and Building Server-Side Web Application with ExpressJS. Currently focusing on Backend Web Development (NodeJS)
+            </p>
+        </div>
+        
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
